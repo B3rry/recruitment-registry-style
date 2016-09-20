@@ -1,0 +1,99 @@
+@import 'reset';
+
+
+// Color Palette
+$color-key: #333333;
+$color-white: #E7EAEE;
+$color-navy: #1A225A;
+$color-accent-blue: #3C9CE3;
+$color-accent-red: #DB3C56;
+
+// Fonts
+$primary-font: 'Raleway', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+// 
+body {
+	background-color: $color-white
+}
+
+// Typographic Grid
+body {
+  font-family: $primary-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1.625em;
+  padding: 1.625em;
+  margin: 0 auto;
+  color: $color-key;
+}
+h1 {
+  font-family: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  font-size: 4.25em;
+  line-height: 1.1470588235294117em;
+  margin-top: 0.38235294117647056em;
+  margin-bottom: 0em;
+}
+h2 {
+  font-family: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  font-size: 2.625em;
+  line-height: 1.2380952380952381em;
+  margin-top: 0.6190476190476191em;
+  margin-bottom: 0.6190476190476191em;
+}
+h3 {
+  font-family: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  font-size: 1.625em;
+  line-height: 1em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+h4 {
+  font-family: inherit;
+  font-weight: 600;
+  font-style: inherit;
+  font-size: 1em;
+  line-height: 1.625em;
+  margin-top: 1.625em;
+  margin-bottom: 0em;
+}
+h5 {
+  font-family: inherit;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1em;
+  line-height: 1.625em;
+  margin-top: 1.625em;
+  margin-bottom: 0em;
+}
+p, ul, ol, pre, table, blockquote, figcaption {
+  margin-top: 0em;
+  margin-bottom: 1.625em;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+b, strong, em, small, code {
+  line-height: 1;
+}
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
