@@ -148,6 +148,15 @@ ul {
 		border-bottom: 1px solid #e0e0e0;
 	}
 }
+#textinput {
+	figure {
+		padding: 5px;
+	}
+	textarea {
+		border-bottom: 1px solid #e0e0e0;
+		height: 80px;
+	}
+}
 #select {
 	figure {
 		display: inline-block;

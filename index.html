@@ -14,6 +14,7 @@
 			<option value="scaffolding">Scaffolding (via Flexboxgrid)</option>
 			<option value="animation">Animation (via animate.css)</option>
 			<option value="buttons">Buttons</option>
+			<option value="textinput">Text Input</option>
 			<option value="select">Select/Dropdowns</option>
 			<option value="radio">Radio Groups</option>
 			<option value="checkboxes">Checkboxes</option>
@@ -157,45 +158,63 @@
 		</ul>
 		<figure>
 			<figcaption>
-			<textarea readonly>H1</textarea>
+			<textarea readonly>h1</textarea>
 			</figcaption>
 			<h1>Sphinx of black quartz, judge my vow.</h1>
 		</figure>
 		<figure>
 			<figcaption>
-			<textarea readonly>H2</textarea>
+			<textarea readonly>h2</textarea>
 			</figcaption>
 			<h2>Watch Jeopardy!, Alex Trebek's fun TV quiz game.</h2>
 		</figure>
 		<figure>
 			<figcaption>
-			<textarea readonly>H3</textarea>
+			<textarea readonly>h3</textarea>
 			</figcaption>
 			<h3>Pack my box with five dozen liquor jugs.</h3>
 		</figure>
 		<figure>
 			<figcaption>
-			<textarea readonly>H4</textarea>
+			<textarea readonly>h4</textarea>
 			</figcaption>
 			<h4>The quick onyx goblin jumps over the lazy dwarf.</h4>
 		</figure>
 		<figure>
 			<figcaption>
-			<textarea readonly>H5</textarea>
+			<textarea readonly>h5</textarea>
 			</figcaption>
 			<h5>Cwm fjord bank glyphs vext quiz.</h5>
 		</figure>
 		<figure>
 			<figcaption>
-			<textarea readonly>H6</textarea>
+			<textarea readonly>h6</textarea>
 			</figcaption>
 			<h6>How razorback-jumping frogs can level six piqued gymnasts!</h6>
 		</figure>
 		<figure>
 			<figcaption>
-			<textarea readonly>P</textarea>
+			<textarea readonly>p</textarea>
 			</figcaption>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat dolor id velit venenatis rutrum. Nam quis augue sed arcu fringilla cursus nec ac lacus. Maecenas condimentum elit eget lobortis hendrerit. Proin ultricies imperdiet odio, eu pharetra mauris tempus sed. In hac habitasse platea dictumst. Aliquam blandit nulla id placerat hendrerit. Donec luctus mattis ultrices. Quisque et justo quis nisl faucibus ornare. Proin sed vulputate velit, a aliquam odio. Vestibulum lorem purus, vehicula ac pellentesque nec, aliquet quis justo. Nullam tincidunt hendrerit libero. Nunc eu placerat tortor, a vehicula odio. Integer pretium massa ante, ut pharetra lectus porttitor dapibus. Nullam vulputate, augue nec tincidunt laoreet, diam eros pellentesque lectus, eu ultricies augue dolor ut lectus.</p>
+		</figure>
+		<figure>
+			<figcaption>
+			<textarea readonly>span.label</textarea>
+			</figcaption>
+			<span class="label">Sign In</span>
+		</figure>
+		<figure>
+			<figcaption>
+			<textarea readonly>span.tooltip</textarea>
+			</figcaption>
+			<span class="tooltip">Make sure you update your status.</span>
+		</figure>
+		<figure>
+			<figcaption>
+			<textarea readonly>p.question</textarea>
+			</figcaption>
+			<p class="question">Would you like to sign up for our weekly newsletter?</p>
 		</figure>
 	</section>
 	<section id="scaffolding">
@@ -238,7 +257,7 @@
 					</li>
 				</ul>
 				<textarea readonly="true">
-				<button class="buttonPrimary success">Sign In</button>
+<button className="buttonPrimary success">Sign In</button>
 				</textarea>
 				<figure>
 					<button>default button</button>
@@ -298,6 +317,34 @@
 					<button class="buttonSecondary dark">buttonSecondary.dark</button>
 				</figure>
 			</section>
+			<section id="textinput">
+				<hr>
+				<h2 style="display:block;">Text Input</h2>
+				<ul>
+					<li>Buttons that preform an <b>action</b> should utilize the <em>button</em> tag.</li>
+					<li>
+						Buttons that take you to a <b>new location</b> should utilize the <em>a</em> tag. <b>NOT EVERY <em>a</em> TAG NEEDS TO BE A BUTTON, THERE ARE MULTIPLE INSTANCES WHERE THEY STAY AS DEFAULT A TAG STYLING IN THE COMPS</b>
+					</li>
+					<li>
+						Buttons should always include either the <em>.buttonPrimary</em> or <em>.buttonSecondary</em> class.
+					</li>
+					<li>
+						Additionally, you may need to specify a specific style of button. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
+					</li>
+				</ul>
+				<textarea readonly="true">
+<label htmlFor="password">Password</label>
+<input id="password" type="password" placeholder="test" />
+				</textarea>
+				<figure>
+					<label htmlFor="1">label</label>
+					<input id="1" type="password" placeholder="input" />
+				</figure>
+				<figure>
+					<label htmlFor="2">label</label>
+					<input class="warning" id="2" type="text" placeholder="input.warning" />
+				</figure>
+			</section>
 			<section id="select">
 				<hr>
 				<h2 style="display:block;">Select</h2>
@@ -311,11 +358,11 @@
 					</li>
 				</ul>
 				<textarea readonly="true">
-				<select class="success">
-					<option value="Apple">Apple</option>
-					<option value="Banana">Banana</option>
-					<option value="Cranberry">Cranberry</option>
-				</select>
+<select className="success">
+	<option value="Apple">Apple</option>
+	<option value="Banana">Banana</option>
+	<option value="Cranberry">Cranberry</option>
+</select>
 				</textarea>
 				<figure><select>
 					<option value="A">Default Select</option>
@@ -389,14 +436,14 @@
 					</li>
 				</ul>
 				<textarea readonly="true">
-				<form class="radioGroup">
-					<input type="radio" name="gender" id="male" value="male"/>
-					<label for="male">Male</label>
-					<input type="radio" name="gender" id="female" value="female"/>
-					<label for="female">Female</label>
-					<input type="radio" name="gender" id="other" value="other"/>
-					<label for="other">Other</label>
-				</form>
+<form className="radioGroup">
+	<input type="radio" name="gender" value="male"/>
+	<label hmtlFor="male">Male</label>
+	<input type="radio" name="gender" value="female"/>
+	<label htmlFor="female">Female</label>
+	<input type="radio" name="gender" value="other"/>
+	<label htmlFor="other">Other</label>
+</form>
 				</textarea>
 				<figure>
 					<form class="radioGroup">
@@ -515,9 +562,9 @@
 					</li>
 				</ul>
 				<textarea readonly="true">
-				<div class="displayBox alert">
-					This is my message
-				</div>
+<div className="displayBox alert">
+	This is my message
+</div>
 				</textarea>
 				<figure>
 					<div class="displayBox">

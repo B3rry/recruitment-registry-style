@@ -6,10 +6,8 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 html, body, div, span, applet, object, iframe,
-h1, h2, nav a.logo, h3, h4, h5, h6, p, textarea, blockquote, pre,
+h1, h2, nav a.logo, h3, p.question, span.question.tooltip, span.question.label, textarea.question, h4, h5, h6, p, span.tooltip, span.label, textarea, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -472,6 +470,8 @@ nav #typography figure a.logo,
 #typography figure h5,
 #typography figure h6,
 #typography figure p,
+#typography figure span.tooltip,
+#typography figure span.label,
 #typography figure textarea,
 #typography figure figcaption,
 .col-xs-offset-0,
@@ -541,7 +541,7 @@ nav #typography figure a.logo,
   flex-basis: 91.66666667%;
   max-width: 91.66666667%; }
 
-.col-xs-12, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure textarea, #typography figure figcaption {
+.col-xs-12, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure span.tooltip, #typography figure span.label, #typography figure textarea, #typography figure figcaption {
   flex-basis: 100%;
   max-width: 100%; }
 
@@ -639,6 +639,8 @@ nav #typography figure a.logo,
   #typography figure h5,
   #typography figure h6,
   #typography figure p,
+  #typography figure span.tooltip,
+  #typography figure span.label,
   #typography figure textarea,
   .col-sm-10,
   .col-sm-11,
@@ -698,7 +700,7 @@ nav #typography figure a.logo,
     flex-basis: 66.66666667%;
     max-width: 66.66666667%; }
 
-  .col-sm-9, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure textarea {
+  .col-sm-9, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure span.tooltip, #typography figure span.label, #typography figure textarea {
     flex-basis: 75%;
     max-width: 75%; }
 
@@ -3310,7 +3312,6 @@ nav #typography figure a.logo,
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
 
-/*This file contains all application-wide CSS variables.*/
 #utility--background {
   position: fixed;
   top: 0;
@@ -3377,7 +3378,7 @@ h2, nav a.logo {
   margin-top: 0.7222222222222222em;
   margin-bottom: 0.7222222222222222em; }
 
-h3 {
+h3, p.question, span.question.tooltip, span.question.label, textarea.question {
   font-family: inherit;
   font-weight: 600;
   font-style: inherit;
@@ -3404,7 +3405,7 @@ h5 {
   margin-top: 1.625em;
   margin-bottom: 0em; }
 
-p, textarea, ul, ol, pre, table, blockquote {
+p, span.tooltip, span.label, textarea, ul, ol, pre, table, blockquote {
   margin-top: 0em;
   margin-bottom: 1.625em; }
 
@@ -3430,6 +3431,20 @@ sub {
 
 a {
   color: #359BE6; }
+
+span.tooltip {
+  font-family: "Lato", sans-serif;
+  color: #6B6E88; }
+
+span.label {
+  font-family: "Lato", sans-serif;
+  color: #6B6E88;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+p.question, span.question.tooltip, span.question.label, textarea.question {
+  font-size: 24px;
+  font-family: "Argent CF", serif; }
 
 .btn, .buttonPrimary, nav ul li #nav--userSettings, nav ul li #nav--register, .buttonSecondary, nav ul li #nav--login, button {
   padding: auto 18px;
@@ -3728,6 +3743,8 @@ input {
   font-weight: 300;
   border-bottom: 1px solid #6B6E88;
   outline: none; }
+  input.warning {
+    border-bottom: 1px solid #DD3953; }
 
 .form__footer {
   margin-top: 50px; }
@@ -3771,7 +3788,7 @@ nav {
   .alt-nav nav a {
     color: #F5F6F7; }
     .alt-nav nav a.logo {
-      color: #gap-white; }
+      color: #F5F6F7; }
   .alt-nav nav ul li #nav--userSettings {
     border: 2px solid #F5F6F7 !important;
     background-color: #F5F6F7 !important;
@@ -3834,7 +3851,7 @@ body {
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse; }
 
-.col-xs, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure textarea, #typography figure figcaption, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, #colors figure, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-offset-1, .col-xs-offset-10, .col-xs-offset-11, .col-xs-offset-12, .col-xs-offset-2, .col-xs-offset-3, .col-xs-offset-4, .col-xs-offset-5, .col-xs-offset-6, .col-xs-offset-7, .col-xs-offset-8, .col-xs-offset-9 {
+.col-xs, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure span.tooltip, #typography figure span.label, #typography figure textarea, #typography figure figcaption, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, #colors figure, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-offset-1, .col-xs-offset-10, .col-xs-offset-11, .col-xs-offset-12, .col-xs-offset-2, .col-xs-offset-3, .col-xs-offset-4, .col-xs-offset-5, .col-xs-offset-6, .col-xs-offset-7, .col-xs-offset-8, .col-xs-offset-9 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
@@ -3919,7 +3936,7 @@ body {
   flex-basis: 91.667%;
   max-width: 91.667%; }
 
-.col-xs-12, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure textarea, #typography figure figcaption {
+.col-xs-12, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure span.tooltip, #typography figure span.label, #typography figure textarea, #typography figure figcaption {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -4024,7 +4041,7 @@ body {
   .container {
     width: 49rem; }
 
-  .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, #colors figure, #typography figure figcaption, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure textarea, .col-sm-offset-1, .col-sm-offset-10, .col-sm-offset-11, .col-sm-offset-12, .col-sm-offset-2, .col-sm-offset-3, .col-sm-offset-4, .col-sm-offset-5, .col-sm-offset-6, .col-sm-offset-7, .col-sm-offset-8, .col-sm-offset-9 {
+  .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, #colors figure, #typography figure figcaption, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure span.tooltip, #typography figure span.label, #typography figure textarea, .col-sm-offset-1, .col-sm-offset-10, .col-sm-offset-11, .col-sm-offset-12, .col-sm-offset-2, .col-sm-offset-3, .col-sm-offset-4, .col-sm-offset-5, .col-sm-offset-6, .col-sm-offset-7, .col-sm-offset-8, .col-sm-offset-9 {
     box-sizing: border-box;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
@@ -4091,7 +4108,7 @@ body {
     flex-basis: 66.667%;
     max-width: 66.667%; }
 
-  .col-sm-9, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure textarea {
+  .col-sm-9, #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure span.tooltip, #typography figure span.label, #typography figure textarea {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -4675,7 +4692,7 @@ ul {
   padding-bottom: 1.62em; }
   #typography figure:first-of-type {
     border-top: 1px solid #e0e0e0; }
-  #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure textarea {
+  #typography figure h1, #typography figure h2, #typography figure nav a.logo, nav #typography figure a.logo, #typography figure h3, #typography figure p.question, #typography figure span.question.tooltip, #typography figure span.question.label, #typography figure textarea.question, #typography figure h4, #typography figure h5, #typography figure h6, #typography figure p, #typography figure span.tooltip, #typography figure span.label, #typography figure textarea {
     display: inline-block;
     border-bottom: 1px solid red;
     border-top: 1px solid red; }
@@ -4695,6 +4712,12 @@ ul {
   padding: 5px; }
 #buttons textarea {
   border-bottom: 1px solid #e0e0e0; }
+
+#textinput figure {
+  padding: 5px; }
+#textinput textarea {
+  border-bottom: 1px solid #e0e0e0;
+  height: 80px; }
 
 #select figure {
   display: inline-block;
