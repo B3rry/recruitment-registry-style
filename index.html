@@ -1,590 +1,585 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="./css/style-presentation.css">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-
 <body>
-<h1>Recruitment Registry Style Guide</h1>
-<span>Last updated on <time>October 31st, 2016</time></span>
-<div id="floatingNAV">
-	<!-- <span>Jump to:</span> -->
-	<select class="light">
-		  <option value="" disabled="disabled" selected="true">Jump To Section</option>
-          <option value="colors">Colors</option>
-          <option value="typography">Typography</option>
-          <option value="scaffolding">Scaffolding (via Flexboxgrid)</option>
-          <option value="animation">Animation (via animate.css)</option>
-          <option value="buttons">Buttons</option>
-          <option value="select">Select/Dropdowns</option>
-          <option value="radio">Radio Groups</option>
-          <option value="checkboxes">Checkboxes</option>
-          <option value="displayboxes">Display Boxes (Alerts/Notifications)</option>
-          <option value="utility">Utility &amp; UI Classes</option>
-    </select>
-    <script type="text/javascript">
-    	$('#floatingNAV').children('select').bind('change', function () {  
-		  // $("html, body").animate({scrollTop: $('#' + $(this)}, "slow");
-		  console.log("what?")
-		  location.href = "#" + $('#floatingNAV').children('select').val(); 
-		}); 
-    </script>
-</div>
-
-
-<section id="colors">
-<hr>
-<h2 style="display:block;">Colors</h2>
-<ul>
-		<li>Display Box sould be the only components with non explicit color variables. They utilize <em>background-color: lighten($, 33%);</em> to calculate the lighter background fill.</li>
-	</ul>
-<div class="row">
-	<figure>
-		<div style="background-color: #333333"></div>
-		<figcaption>
-			<span>Black</span>
-			<!-- <textarea readonly>#333333</textarea> -->
-			<textarea readonly>$color-black</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #6B6E88"></div>
-		<figcaption>
-			<span>Dark Grey</span>
-			<!-- <textarea readonly>#6B6E88</textarea> -->
-			<textarea readonly>$color-dark-grey</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #C1C1C1"></div>
-		<figcaption>
-			<span>Medium Grey</span>
-			<!-- <textarea readonly>#C1C1C1</textarea> -->
-			<textarea readonly>$color-medium-grey</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #E7EAEE"></div>
-		<figcaption>
-			<span>Light Grey</span>
-			<!-- <textarea readonly>#E7EAEE</textarea> -->
-			<textarea readonly>$color-light-grey</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #F5F6F7"></div>
-		<figcaption>
-			<span>White</span>
-			<!-- <textarea readonly>#F5F6F7</textarea> -->
-			<textarea readonly>$color-white</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #283178"></div>
-		<figcaption>
-			<span>Color Key Dark</span>
-			<!-- <textarea readonly>#283178</textarea> -->
-			<textarea readonly>$color-key-dark</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #359BE6"></div>
-		<figcaption>
-			<span>Color Key Medium</span>
-			<!-- <textarea readonly>#359BE6</textarea> -->
-			<textarea readonly>$color-key-medium</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #9FC6E2"></div>
-		<figcaption>
-			<span>Color Key Light</span>
-			<!-- <textarea readonly>#9FC6E2</textarea> -->
-			<textarea readonly>$color-key-light</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #DD3953"></div>
-		<figcaption>
-			<span>Color Warning</span>
-			<!-- <textarea readonly>#DD3953</textarea> -->
-			<textarea readonly>$color-warning</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #EEBA3D"></div>
-		<figcaption>
-			<span>Color Alert</span>
-			<!-- <textarea readonly>#EEBA3D</textarea> -->
-			<textarea readonly>$color-alert</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #6B14CE"></div>
-		<figcaption>
-			<span>Color Info</span>
-			<!-- <textarea readonly>#6B14CE</textarea> -->
-			<textarea readonly>$color-info</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #04A777"></div>
-		<figcaption>
-			<span>Color Success</span>
-			<!-- <textarea readonly>#04A777</textarea> -->
-			<textarea readonly>$color-success</textarea>
-		</figcaption>
-	</figure>
-	<figure>
-		<div style="background-color: #00D196"></div>
-		<figcaption>
-			<span>Color Confirm</span>
-			<!-- <textarea readonly>#00D196</textarea> -->
-			<textarea readonly>$color-confirm</textarea>
-		</figcaption>
-	</figure>
+	<h1>Recruitment Registry Style Guide</h1>
+	<span>Last updated on <time>October 31st, 2016</time></span>
+	<div id="floatingNAV">
+		<!-- <span>Jump to:</span> -->
+		<select class="light">
+			<option value="" disabled="disabled" selected="true">Jump To Section</option>
+			<option value="colors">Colors</option>
+			<option value="typography">Typography</option>
+			<option value="scaffolding">Scaffolding (via Flexboxgrid)</option>
+			<option value="animation">Animation (via animate.css)</option>
+			<option value="buttons">Buttons</option>
+			<option value="select">Select/Dropdowns</option>
+			<option value="radio">Radio Groups</option>
+			<option value="checkboxes">Checkboxes</option>
+			<option value="displayboxes">Display Boxes (Alerts/Notifications)</option>
+			<option value="utility">Utility &amp; UI Classes</option>
+		</select>
+		<script type="text/javascript">
+			$('#floatingNAV').children('select').bind('change', function () {
+				// $("html, body").animate({scrollTop: $('#' + $(this)}, "slow");
+				console.log("what?")
+				location.href = "#" + $('#floatingNAV').children('select').val();
+				});
+		</script>
 	</div>
-</section>
-<section id="typography">
-<hr>
-<h2 style="display:block;">Typography</h2>
-	<ul>
-		<li>Typefaces are separated into three different styles for different use cases. (There is an additional monospace font declaration that is unusued).</li>
-		<li>
-		By default, text is styled as <b>Raleway</b> by using the <em>$font-primary</em> SASS variable. This is used for all general use text.</li>
-		<li>
-			Tooltip text, flavor text, and other informational text uses <em>$font-secondary</em>, which is <b>Lato</b>. Apply <em>.label</em> for instances of this text as a label. Apply <em>.tooltip</em> for instances of this text as a tooltip.
-		</li>
-		<li>
-			Questions and other similar components use <b>Argent CF</b> bold. This is called via <em>$font-serif</em>. For question text, please apply <em>.question</em> to a <em>p</em> tag with your content.
-		</li>
-	</ul>
-	<figure>
-		<figcaption>
+	<section id="colors">
+		<hr>
+		<h2 style="display:block;">Colors</h2>
+		<ul>
+			<li>Display Box sould be the only components with non explicit color variables. They utilize <em>background-color: lighten($, 33%);</em> to calculate the lighter background fill.</li>
+		</ul>
+		<div class="row">
+			<figure>
+				<div style="background-color: #333333"></div>
+				<figcaption>
+				<span>Black</span>
+				<!-- <textarea readonly>#333333</textarea> -->
+				<textarea readonly>$color-black</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #6B6E88"></div>
+				<figcaption>
+				<span>Dark Grey</span>
+				<!-- <textarea readonly>#6B6E88</textarea> -->
+				<textarea readonly>$color-dark-grey</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #C1C1C1"></div>
+				<figcaption>
+				<span>Medium Grey</span>
+				<!-- <textarea readonly>#C1C1C1</textarea> -->
+				<textarea readonly>$color-medium-grey</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #E7EAEE"></div>
+				<figcaption>
+				<span>Light Grey</span>
+				<!-- <textarea readonly>#E7EAEE</textarea> -->
+				<textarea readonly>$color-light-grey</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #F5F6F7"></div>
+				<figcaption>
+				<span>White</span>
+				<!-- <textarea readonly>#F5F6F7</textarea> -->
+				<textarea readonly>$color-white</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #283178"></div>
+				<figcaption>
+				<span>Color Key Dark</span>
+				<!-- <textarea readonly>#283178</textarea> -->
+				<textarea readonly>$color-key-dark</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #359BE6"></div>
+				<figcaption>
+				<span>Color Key Medium</span>
+				<!-- <textarea readonly>#359BE6</textarea> -->
+				<textarea readonly>$color-key-medium</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #9FC6E2"></div>
+				<figcaption>
+				<span>Color Key Light</span>
+				<!-- <textarea readonly>#9FC6E2</textarea> -->
+				<textarea readonly>$color-key-light</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #DD3953"></div>
+				<figcaption>
+				<span>Color Warning</span>
+				<!-- <textarea readonly>#DD3953</textarea> -->
+				<textarea readonly>$color-warning</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #EEBA3D"></div>
+				<figcaption>
+				<span>Color Alert</span>
+				<!-- <textarea readonly>#EEBA3D</textarea> -->
+				<textarea readonly>$color-alert</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #6B14CE"></div>
+				<figcaption>
+				<span>Color Info</span>
+				<!-- <textarea readonly>#6B14CE</textarea> -->
+				<textarea readonly>$color-info</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #04A777"></div>
+				<figcaption>
+				<span>Color Success</span>
+				<!-- <textarea readonly>#04A777</textarea> -->
+				<textarea readonly>$color-success</textarea>
+				</figcaption>
+			</figure>
+			<figure>
+				<div style="background-color: #00D196"></div>
+				<figcaption>
+				<span>Color Confirm</span>
+				<!-- <textarea readonly>#00D196</textarea> -->
+				<textarea readonly>$color-confirm</textarea>
+				</figcaption>
+			</figure>
+		</div>
+	</section>
+	<section id="typography">
+		<hr>
+		<h2 style="display:block;">Typography</h2>
+		<ul>
+			<li>Typefaces are separated into three different styles for different use cases. (There is an additional monospace font declaration that is unusued).</li>
+			<li>
+			By default, text is styled as <b>Raleway</b> by using the <em>$font-primary</em> SASS variable. This is used for all general use text.</li>
+			<li>
+				Tooltip text, flavor text, and other informational text uses <em>$font-secondary</em>, which is <b>Lato</b>. Apply <em>.label</em> for instances of this text as a label. Apply <em>.tooltip</em> for instances of this text as a tooltip.
+			</li>
+			<li>
+				Questions and other similar components use <b>Argent CF</b> bold. This is called via <em>$font-serif</em>. For question text, please apply <em>.question</em> to a <em>p</em> tag with your content.
+			</li>
+		</ul>
+		<figure>
+			<figcaption>
 			<textarea readonly>H1</textarea>
-		</figcaption>
-		<h1>Sphinx of black quartz, judge my vow.</h1>
-	</figure>
-	<figure>
-		<figcaption>
+			</figcaption>
+			<h1>Sphinx of black quartz, judge my vow.</h1>
+		</figure>
+		<figure>
+			<figcaption>
 			<textarea readonly>H2</textarea>
-		</figcaption>
-		<h2>Watch Jeopardy!, Alex Trebek's fun TV quiz game.</h2>
-	</figure>
-	<figure>
-		<figcaption>
-				<textarea readonly>H3</textarea>
-		</figcaption>
-		<h3>Pack my box with five dozen liquor jugs.</h3>
-	</figure>
-	<figure>
-		<figcaption>
+			</figcaption>
+			<h2>Watch Jeopardy!, Alex Trebek's fun TV quiz game.</h2>
+		</figure>
+		<figure>
+			<figcaption>
+			<textarea readonly>H3</textarea>
+			</figcaption>
+			<h3>Pack my box with five dozen liquor jugs.</h3>
+		</figure>
+		<figure>
+			<figcaption>
 			<textarea readonly>H4</textarea>
-		</figcaption>
-		<h4>The quick onyx goblin jumps over the lazy dwarf.</h4>
-	</figure>
-	<figure>
-		<figcaption>
+			</figcaption>
+			<h4>The quick onyx goblin jumps over the lazy dwarf.</h4>
+		</figure>
+		<figure>
+			<figcaption>
 			<textarea readonly>H5</textarea>
-		</figcaption>
-		<h5>Cwm fjord bank glyphs vext quiz.</h5>
-	</figure>
-	<figure>
-		<figcaption>
+			</figcaption>
+			<h5>Cwm fjord bank glyphs vext quiz.</h5>
+		</figure>
+		<figure>
+			<figcaption>
 			<textarea readonly>H6</textarea>
-		</figcaption>
-		<h6>How razorback-jumping frogs can level six piqued gymnasts!</h6>
-	</figure>
-	<figure>
-		<figcaption>
+			</figcaption>
+			<h6>How razorback-jumping frogs can level six piqued gymnasts!</h6>
+		</figure>
+		<figure>
+			<figcaption>
 			<textarea readonly>P</textarea>
-		</figcaption>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat dolor id velit venenatis rutrum. Nam quis augue sed arcu fringilla cursus nec ac lacus. Maecenas condimentum elit eget lobortis hendrerit. Proin ultricies imperdiet odio, eu pharetra mauris tempus sed. In hac habitasse platea dictumst. Aliquam blandit nulla id placerat hendrerit. Donec luctus mattis ultrices. Quisque et justo quis nisl faucibus ornare. Proin sed vulputate velit, a aliquam odio. Vestibulum lorem purus, vehicula ac pellentesque nec, aliquet quis justo. Nullam tincidunt hendrerit libero. Nunc eu placerat tortor, a vehicula odio. Integer pretium massa ante, ut pharetra lectus porttitor dapibus. Nullam vulputate, augue nec tincidunt laoreet, diam eros pellentesque lectus, eu ultricies augue dolor ut lectus.</p>
-	</figure>
-</section>
-<section id="scaffolding">
-	<hr>
-	<h2 style="display:block;">Scaffolding</h2>
-	<ul>
-		<li>Scaffolding is implemented via flexboxgrid. </li>
-		<li>
-			Documentation is available at: <a href="http://flexboxgrid.com/">http://flexboxgrid.com</a>
-		<li>
-			Consider using the sass property <em>extend</em> to reduce the number of utility classes exposed in the html. <a href="http://sass-lang.com/guide#topic-7">Documentation.</a>
-		</li>
-	</ul>
-</section>
-<section id="animation">
-	<hr>
-	<h2 style="display:block;">Animation</h2>
-	<ul>
-		<li>Animation is implemented via <em>animate.css</em>.</li>
-		<li>
-			Documentation is available at: <a href="https://github.com/daneden/animate.css">https://github.com/daneden/animate.css</a>
-		<li>
-			Consider using the sass property <em>extend</em> to reduce the number of utility classes exposed in the html. <a href="http://sass-lang.com/guide#topic-7">Documentation.</a>
-		</li>
-	</ul>
-</section>
-<section id="buttons">
-<hr>
-<h2 style="display:block;">Buttons</h2>
-	<ul>
-		<li>Buttons that preform an <b>action</b> should utilize the <em>button</em> tag.</li>
-		<li>
-			Buttons that take you to a <b>new location</b> should utilize the <em>a</em> tag. <b>NOT EVERY <em>a</em> TAG NEEDS TO BE A BUTTON, THERE ARE MULTIPLE INSTANCES WHERE THEY STAY AS DEFAULT A TAG STYLING IN THE COMPS</b>
-			</li>
-		<li>
-			Buttons should always include either the <em>.buttonPrimary</em> or <em>.buttonSecondary</em> class.
-		</li>
-		<li>
-			Additionally, you may need to specify a specific style of button. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
-		</li>
-	</ul>
-		<textarea readonly="true">
-<button class="buttonPrimary success">Sign In</button>
-	</textarea>
-	<figure>
-		<button>default button</button>
-	</figure>
-	<figure>
-		<button class="buttonPrimary">buttonPrimary</button>
-	</figure>
-	<figure style="background-color: #333">
-		<button class="buttonPrimary light">buttonPrimary.light</button>
-	</figure>
-	<figure>
-		<button class="buttonPrimary success">buttonPrimary.success</button>
-	</figure>
-	<figure>
-		<button class="buttonPrimary confirm">buttonPrimary.confirm</button>
-	</figure>
-	<figure>
-		<button class="buttonPrimary alert">buttonPrimary.alert</button>
-	</figure>
-	<figure>
-		<button class="buttonPrimary warning">buttonPrimary.warning</button>
-	</figure>
-	<figure>
-		<button class="buttonPrimary info">buttonPrimary.info</button>
-	</figure>
-	<figure>
-		<button class="buttonPrimary system">buttonPrimary.system</button>
-	</figure>
-	<figure>
-		<button class="buttonPrimary dark">buttonPrimary.dark</button>
-	</figure>
-	<figure>
-	<button class="buttonSecondary">buttonSecondary</button>
-	</figure>
-	<figure style="background-color: #333">
-	<button class="buttonSecondary light">buttonSecondary.light</button>
-	</figure>
-	<figure>
-	<button class="buttonSecondary success">buttonSecondary.success</button>
-	</figure>
-	<figure>
-	<button class="buttonSecondary confirm">buttonSecondary.confirm</button>
-	</figure>
-	<figure>
-	<button class="buttonSecondary alert">buttonSecondary.alert</button>
-	</figure>
-	<figure>
-	<button class="buttonSecondary warning">buttonSecondary.warning</button>
-	</figure>
-	<figure>
-	<button class="buttonSecondary info">buttonSecondary.info</button>
-	</figure>
-	<figure>
-	<button class="buttonSecondary system">buttonSecondary.system</button>
-	</figure>
-	<figure>
-	<button class="buttonSecondary dark">buttonSecondary.dark</button>
-	</figure>
-</section>
-<section id="select">
-	<hr>
-<h2 style="display:block;">Select</h2>
-	<ul>
-		<li>Dropdowns are styled by using the default <em>select</em> implementation. <a href="http://www.w3schools.com/tags/tag_select.asp">W3 Schools - HTML select Tag documentation</a></li>
-		<li>
-			Selects use a custom background-image for dropdown indicator custom style. This reuqires a SASS function to execute. If you must change the color outside of the normal classes, this color must be passed as a HEX value. See the implementations in <em>./client/src/styles/components/_form.scss</em> 
-			</li>
-		<li>
-			You may need to specify a specific style of select. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
-		</li>
-	</ul>
-	<textarea readonly="true">
-<select class="success">
-	<option value="Apple">Apple</option>
-	<option value="Banana">Banana</option>
-	<option value="Cranberry">Cranberry</option>
-</select>
-	</textarea>
-	<figure><select>
-          <option value="A">Default Select</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select>
-        </figure>
-        <figure style="background-color: #333">
-        <select class="form--select light">
-          <option value="A">select.light</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select>
-        </figure>
-        <figure>
-        <select class="form--select success">
-          <option value="A">select.success</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select>
-        </figure>
-        <figure>
-        <select class="form--select confirm">
-          <option value="A">select.confirm</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select>
-        </figure>
-        <figure>
-        <select class="form--select alert">
-          <option value="A">select.alert</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select>
-        </figure>
-        <figure>
-        <select class="form--select warning">
-          <option value="A">select.warning</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select>
-        </figure>
-        <figure>
-        <select class="form--select info">
-          <option value="A">select.info</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select>
-        </figure>
-        <figure>
-        <select class="form--select system">
-          <option value="A">select.system</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select>
-        </figure>
-        <figure>
-        <select class="form--select dark">
-          <option value="A">select.dark</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select></figure>
-</section>
-<section id="radio">
-	<hr>
-	<h2 style="display:block;">Radio Groups</h2>
-	<ul>
-		<li>Radio groups are styled by using the default <em>radio</em> implementation. <a href="http://www.w3schools.com/html/html_forms.asp">W3 Schools - HTML Form Radio Button input</a></li>
-		<li>
-			You may need to specify a specific style of radio group. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
-		</li>
-	</ul>
-	<textarea readonly="true">
-<form class="radioGroup"> 
-	<input type="radio" name="gender" id="male" value="male"/>
-	<label for="male">Male</label>
-	<input type="radio" name="gender" id="female" value="female"/>
-	<label for="female">Female</label>
-	<input type="radio" name="gender" id="other" value="other"/>
-	<label for="other">Other</label>
-</form>
-	</textarea>
-	<figure>
-		<form class="radioGroup"> 
-          <input type="radio" name="gender" id="male" value="male"/>
-          <label for="male">.radioGroup</label>
-          <input type="radio" name="gender" id="female" value="female"/>
-          <label for="female">Female</label>
-          <input type="radio" name="gender" id="other" value="other"/>
-          <label for="other">Other</label>
-        </form>
-	</figure>
-	<figure style="background-color: #333">
-		<form class="radioGroup light"> 
-          <input type="radio" name="gender1" id="male1" value="male1"/>
-          <label for="male1">.radioGroup.light</label>
-          <input type="radio" name="gender1" id="female1" value="female1"/>
-          <label for="female1">Female</label>
-          <input type="radio" name="gender1" id="other1" value="other1"/>
-          <label for="other1">Other</label>
-        </form>
-	</figure>
-	<figure>
-		<form class="radioGroup success"> 
-          <input type="radio" checked="checked" name="gender2" id="male2" value="male2"/>
-          <label for="male2">.radioGroup.success</label>
-          <input type="radio" name="gender2" id="female2" value="female2"/>
-          <label for="female2">Female</label>
-          <input type="radio" name="gender2" id="other2" value="other2"/>
-          <label for="other2">Other</label>
-        </form>
-	</figure>
-	<figure>
-		<form class="radioGroup confirm"> 
-          <input type="radio" checked="checked" name="gender3" id="male3" value="male3"/>
-          <label for="male3">.radioGroup.confirm</label>
-          <input type="radio" name="gender3" id="female3" value="female3"/>
-          <label for="female3">Female</label>
-          <input type="radio" name="gender3" id="other3" value="other3"/>
-          <label for="other3">Other</label>
-        </form>
-	</figure>
-	<figure>
-		<form class="radioGroup alert"> 
-          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
-          <label for="male">.radioGroup.alert</label>
-          <input type="radio" name="gender" id="female" value="female"/>
-          <label for="female">Female</label>
-          <input type="radio" name="gender" id="other" value="other"/>
-          <label for="other">Other</label>
-        </form>
-	</figure>
-	<figure>
-		<form class="radioGroup warning"> 
-          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
-          <label for="male">.radioGroup.warning</label>
-          <input type="radio" name="gender" id="female" value="female"/>
-          <label for="female">Female</label>
-          <input type="radio" name="gender" id="other" value="other"/>
-          <label for="other">Other</label>
-        </form>
-	</figure>
-	<figure>
-		<form class="radioGroup info"> 
-          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
-          <label for="male">.radioGroup.info</label>
-          <input type="radio" name="gender" id="female" value="female"/>
-          <label for="female">Female</label>
-          <input type="radio" name="gender" id="other" value="other"/>
-          <label for="other">Other</label>
-        </form>
-        </figure>
-        <figure>
-		<form class="radioGroup system"> 
-          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
-          <label for="male">.radioGroup.system</label>
-          <input type="radio" name="gender" id="female" value="female"/>
-          <label for="female">Female</label>
-          <input type="radio" name="gender" id="other" value="other"/>
-          <label for="other">Other</label>
-        </form>
-	</figure>
-	<figure>
-		<form class="radioGroup dark"> 
-          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
-          <label for="male">.radioGroup.dark</label>
-          <input type="radio" name="gender" id="female" value="female"/>
-          <label for="female">Female</label>
-          <input type="radio" name="gender" id="other" value="other"/>
-          <label for="other">Other</label>
-        </form>
-	</figure>
-</section>
-
-<section id="checkboxes">
-	<hr>
-	<h2 style="display:block;">Checkboxes</h2>
-	<ul>
-		<li>Coming soon</li>
-	</ul>
-	<figure>
-		
-	</figure>
-</section>
-
-<section id="displayboxes">
-	<hr>
-	<h2 style="display:block;">Display Boxes (Alerts/Notifications)</h2>
-	<ul>
-		<li>Display boxes are used to show alerts and notifications to a user. This includes validation messages and warnings. Use <em>.displayBox</em> to extend the class to your <em>div</em></li>
-		<li>
-			Consider adding <em>.animated</em> and <em>.fadeInUp</em> to notifications that appear to a user after an action.
-		</li>
-		<li>
-			This is the only section where colors are not defined as explicit variables. Use <em>background-color: lighten($, 33%);</em> when constructing new <em>displayBox</em> types.
-		</li>
-		<li>
-			You may need to specify a specific style of display box. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
-		</li>
-	</ul>
-	<textarea readonly="true">
-<div class="displayBox alert">
-	This is my message
-</div>
-	</textarea>
-	<figure>
-		<div class="displayBox">
-			This is .displayBox
-		</div>
-	</figure>
-	<figure>
-		<div class="displayBox light">
-			This is .displayBox.light
-		</div>
-	</figure>
-	<figure>
-		<div class="displayBox success">
-			This is .displayBox.success
-		</div>
-	</figure>
-	<figure>
-		<div class="displayBox confirm">
-			This is .displayBox.confirm
-		</div>
-	</figure>
-	<figure>
-		<div class="displayBox alert">
-			This is .displayBox.alert
-		</div>
-	</figure>
-	<figure>
-		<div class="displayBox warning">
-			This is .displayBox.warning
-		</div>
-	</figure>
-	<figure>
-		<div class="displayBox info">
-			This is .displayBox.info
-		</div>
-	</figure>
-	<figure>
-		<div class="displayBox system">
-			This is .displayBox.system
-		</div>
-	</figure>
-	<figure>
-		<div class="displayBox dark">
-			This is .displayBox.dark
-		</div>
-	</figure>
-</section>
-
-<section id="utility">
-	<hr>
-	<h2 style="display:block;">Utility &amp; UI Classes</h2>
-	<ul>
-		<li>Radio groups are styled by using the default <em>radio</em> implementation. <a href="http://www.w3schools.com/html/html_forms.asp">W3 Schools - HTML Form Radio Button input</a></li>
-		<li>
-			You may need to specify a specific style of select. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
-		</li>
-	</ul>
-	
-</section>
-
-
-
-
-
-</body>
+			</figcaption>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat dolor id velit venenatis rutrum. Nam quis augue sed arcu fringilla cursus nec ac lacus. Maecenas condimentum elit eget lobortis hendrerit. Proin ultricies imperdiet odio, eu pharetra mauris tempus sed. In hac habitasse platea dictumst. Aliquam blandit nulla id placerat hendrerit. Donec luctus mattis ultrices. Quisque et justo quis nisl faucibus ornare. Proin sed vulputate velit, a aliquam odio. Vestibulum lorem purus, vehicula ac pellentesque nec, aliquet quis justo. Nullam tincidunt hendrerit libero. Nunc eu placerat tortor, a vehicula odio. Integer pretium massa ante, ut pharetra lectus porttitor dapibus. Nullam vulputate, augue nec tincidunt laoreet, diam eros pellentesque lectus, eu ultricies augue dolor ut lectus.</p>
+		</figure>
+	</section>
+	<section id="scaffolding">
+		<hr>
+		<h2 style="display:block;">Scaffolding</h2>
+		<ul>
+			<li>Scaffolding is implemented via flexboxgrid. </li>
+			<li>
+				Documentation is available at: <a href="http://flexboxgrid.com/">http://flexboxgrid.com</a>
+				<li>
+					Consider using the sass property <em>extend</em> to reduce the number of utility classes exposed in the html. <a href="http://sass-lang.com/guide#topic-7">Documentation.</a>
+				</li>
+			</ul>
+		</section>
+		<section id="animation">
+			<hr>
+			<h2 style="display:block;">Animation</h2>
+			<ul>
+				<li>Animation is implemented via <em>animate.css</em>.</li>
+				<li>
+					Documentation is available at: <a href="https://github.com/daneden/animate.css">https://github.com/daneden/animate.css</a>
+					<li>
+						Consider using the sass property <em>extend</em> to reduce the number of utility classes exposed in the html. <a href="http://sass-lang.com/guide#topic-7">Documentation.</a>
+					</li>
+				</ul>
+			</section>
+			<section id="buttons">
+				<hr>
+				<h2 style="display:block;">Buttons</h2>
+				<ul>
+					<li>Buttons that preform an <b>action</b> should utilize the <em>button</em> tag.</li>
+					<li>
+						Buttons that take you to a <b>new location</b> should utilize the <em>a</em> tag. <b>NOT EVERY <em>a</em> TAG NEEDS TO BE A BUTTON, THERE ARE MULTIPLE INSTANCES WHERE THEY STAY AS DEFAULT A TAG STYLING IN THE COMPS</b>
+					</li>
+					<li>
+						Buttons should always include either the <em>.buttonPrimary</em> or <em>.buttonSecondary</em> class.
+					</li>
+					<li>
+						Additionally, you may need to specify a specific style of button. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
+					</li>
+				</ul>
+				<textarea readonly="true">
+				<button class="buttonPrimary success">Sign In</button>
+				</textarea>
+				<figure>
+					<button>default button</button>
+				</figure>
+				<figure>
+					<button class="buttonPrimary">buttonPrimary</button>
+				</figure>
+				<figure style="background-color: #333">
+					<button class="buttonPrimary light">buttonPrimary.light</button>
+				</figure>
+				<figure>
+					<button class="buttonPrimary success">buttonPrimary.success</button>
+				</figure>
+				<figure>
+					<button class="buttonPrimary confirm">buttonPrimary.confirm</button>
+				</figure>
+				<figure>
+					<button class="buttonPrimary alert">buttonPrimary.alert</button>
+				</figure>
+				<figure>
+					<button class="buttonPrimary warning">buttonPrimary.warning</button>
+				</figure>
+				<figure>
+					<button class="buttonPrimary info">buttonPrimary.info</button>
+				</figure>
+				<figure>
+					<button class="buttonPrimary system">buttonPrimary.system</button>
+				</figure>
+				<figure>
+					<button class="buttonPrimary dark">buttonPrimary.dark</button>
+				</figure>
+				<figure>
+					<button class="buttonSecondary">buttonSecondary</button>
+				</figure>
+				<figure style="background-color: #333">
+					<button class="buttonSecondary light">buttonSecondary.light</button>
+				</figure>
+				<figure>
+					<button class="buttonSecondary success">buttonSecondary.success</button>
+				</figure>
+				<figure>
+					<button class="buttonSecondary confirm">buttonSecondary.confirm</button>
+				</figure>
+				<figure>
+					<button class="buttonSecondary alert">buttonSecondary.alert</button>
+				</figure>
+				<figure>
+					<button class="buttonSecondary warning">buttonSecondary.warning</button>
+				</figure>
+				<figure>
+					<button class="buttonSecondary info">buttonSecondary.info</button>
+				</figure>
+				<figure>
+					<button class="buttonSecondary system">buttonSecondary.system</button>
+				</figure>
+				<figure>
+					<button class="buttonSecondary dark">buttonSecondary.dark</button>
+				</figure>
+			</section>
+			<section id="select">
+				<hr>
+				<h2 style="display:block;">Select</h2>
+				<ul>
+					<li>Dropdowns are styled by using the default <em>select</em> implementation. <a href="http://www.w3schools.com/tags/tag_select.asp">W3 Schools - HTML select Tag documentation</a></li>
+					<li>
+						Selects use a custom background-image for dropdown indicator custom style. This reuqires a SASS function to execute. If you must change the color outside of the normal classes, this color must be passed as a HEX value. See the implementations in <em>./client/src/styles/components/_form.scss</em>
+					</li>
+					<li>
+						You may need to specify a specific style of select. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
+					</li>
+				</ul>
+				<textarea readonly="true">
+				<select class="success">
+					<option value="Apple">Apple</option>
+					<option value="Banana">Banana</option>
+					<option value="Cranberry">Cranberry</option>
+				</select>
+				</textarea>
+				<figure><select>
+					<option value="A">Default Select</option>
+					<option value="B">Banana</option>
+					<option value="C">Cranberry</option>
+				</select>
+			</figure>
+			<figure style="background-color: #333">
+				<select class="form--select light">
+					<option value="A">select.light</option>
+					<option value="B">Banana</option>
+					<option value="C">Cranberry</option>
+				</select>
+			</figure>
+			<figure>
+				<select class="form--select success">
+					<option value="A">select.success</option>
+					<option value="B">Banana</option>
+					<option value="C">Cranberry</option>
+				</select>
+			</figure>
+			<figure>
+				<select class="form--select confirm">
+					<option value="A">select.confirm</option>
+					<option value="B">Banana</option>
+					<option value="C">Cranberry</option>
+				</select>
+			</figure>
+			<figure>
+				<select class="form--select alert">
+					<option value="A">select.alert</option>
+					<option value="B">Banana</option>
+					<option value="C">Cranberry</option>
+				</select>
+			</figure>
+			<figure>
+				<select class="form--select warning">
+					<option value="A">select.warning</option>
+					<option value="B">Banana</option>
+					<option value="C">Cranberry</option>
+				</select>
+			</figure>
+			<figure>
+				<select class="form--select info">
+					<option value="A">select.info</option>
+					<option value="B">Banana</option>
+					<option value="C">Cranberry</option>
+				</select>
+			</figure>
+			<figure>
+				<select class="form--select system">
+					<option value="A">select.system</option>
+					<option value="B">Banana</option>
+					<option value="C">Cranberry</option>
+				</select>
+			</figure>
+			<figure>
+				<select class="form--select dark">
+					<option value="A">select.dark</option>
+					<option value="B">Banana</option>
+					<option value="C">Cranberry</option>
+				</select></figure>
+			</section>
+			<section id="radio">
+				<hr>
+				<h2 style="display:block;">Radio Groups</h2>
+				<ul>
+					<li>Radio groups are styled by using the default <em>radio</em> implementation. <a href="http://www.w3schools.com/html/html_forms.asp">W3 Schools - HTML Form Radio Button input</a></li>
+					<li>
+						You may need to specify a specific style of radio group. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
+					</li>
+				</ul>
+				<textarea readonly="true">
+				<form class="radioGroup">
+					<input type="radio" name="gender" id="male" value="male"/>
+					<label for="male">Male</label>
+					<input type="radio" name="gender" id="female" value="female"/>
+					<label for="female">Female</label>
+					<input type="radio" name="gender" id="other" value="other"/>
+					<label for="other">Other</label>
+				</form>
+				</textarea>
+				<figure>
+					<form class="radioGroup">
+						<input type="radio" name="gender" id="male" value="male"/>
+						<label for="male">.radioGroup</label>
+						<input type="radio" name="gender" id="female" value="female"/>
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="other" value="other"/>
+						<label for="other">Other</label>
+					</form>
+				</figure>
+				<figure style="background-color: #333">
+					<form class="radioGroup light">
+						<input type="radio" name="gender1" id="male1" value="male1"/>
+						<label for="male1">.radioGroup.light</label>
+						<input type="radio" name="gender1" id="female1" value="female1"/>
+						<label for="female1">Female</label>
+						<input type="radio" name="gender1" id="other1" value="other1"/>
+						<label for="other1">Other</label>
+					</form>
+				</figure>
+				<figure>
+					<form class="radioGroup success">
+						<input type="radio" checked="checked" name="gender2" id="male2" value="male2"/>
+						<label for="male2">.radioGroup.success</label>
+						<input type="radio" name="gender2" id="female2" value="female2"/>
+						<label for="female2">Female</label>
+						<input type="radio" name="gender2" id="other2" value="other2"/>
+						<label for="other2">Other</label>
+					</form>
+				</figure>
+				<figure>
+					<form class="radioGroup confirm">
+						<input type="radio" checked="checked" name="gender3" id="male3" value="male3"/>
+						<label for="male3">.radioGroup.confirm</label>
+						<input type="radio" name="gender3" id="female3" value="female3"/>
+						<label for="female3">Female</label>
+						<input type="radio" name="gender3" id="other3" value="other3"/>
+						<label for="other3">Other</label>
+					</form>
+				</figure>
+				<figure>
+					<form class="radioGroup alert">
+						<input type="radio" checked="checked" name="gender" id="male" value="male"/>
+						<label for="male">.radioGroup.alert</label>
+						<input type="radio" name="gender" id="female" value="female"/>
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="other" value="other"/>
+						<label for="other">Other</label>
+					</form>
+				</figure>
+				<figure>
+					<form class="radioGroup warning">
+						<input type="radio" checked="checked" name="gender" id="male" value="male"/>
+						<label for="male">.radioGroup.warning</label>
+						<input type="radio" name="gender" id="female" value="female"/>
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="other" value="other"/>
+						<label for="other">Other</label>
+					</form>
+				</figure>
+				<figure>
+					<form class="radioGroup info">
+						<input type="radio" checked="checked" name="gender" id="male" value="male"/>
+						<label for="male">.radioGroup.info</label>
+						<input type="radio" name="gender" id="female" value="female"/>
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="other" value="other"/>
+						<label for="other">Other</label>
+					</form>
+				</figure>
+				<figure>
+					<form class="radioGroup system">
+						<input type="radio" checked="checked" name="gender" id="male" value="male"/>
+						<label for="male">.radioGroup.system</label>
+						<input type="radio" name="gender" id="female" value="female"/>
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="other" value="other"/>
+						<label for="other">Other</label>
+					</form>
+				</figure>
+				<figure>
+					<form class="radioGroup dark">
+						<input type="radio" checked="checked" name="gender" id="male" value="male"/>
+						<label for="male">.radioGroup.dark</label>
+						<input type="radio" name="gender" id="female" value="female"/>
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="other" value="other"/>
+						<label for="other">Other</label>
+					</form>
+				</figure>
+			</section>
+			<section id="checkboxes">
+				<hr>
+				<h2 style="display:block;">Checkboxes</h2>
+				<ul>
+					<li>Coming soon</li>
+				</ul>
+				<figure>
+					
+				</figure>
+			</section>
+			<section id="displayboxes">
+				<hr>
+				<h2 style="display:block;">Display Boxes (Alerts/Notifications)</h2>
+				<ul>
+					<li>Display boxes are used to show alerts and notifications to a user. This includes validation messages and warnings. Use <em>.displayBox</em> to extend the class to your <em>div</em></li>
+					<li>
+						Consider adding <em>.animated</em> and <em>.fadeInUp</em> to notifications that appear to a user after an action.
+					</li>
+					<li>
+						This is the only section where colors are not defined as explicit variables. Use <em>background-color: lighten($, 33%);</em> when constructing new <em>displayBox</em> types.
+					</li>
+					<li>
+						You may need to specify a specific style of display box. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
+					</li>
+				</ul>
+				<textarea readonly="true">
+				<div class="displayBox alert">
+					This is my message
+				</div>
+				</textarea>
+				<figure>
+					<div class="displayBox">
+						This is .displayBox
+					</div>
+				</figure>
+				<figure>
+					<div class="displayBox light">
+						This is .displayBox.light
+					</div>
+				</figure>
+				<figure>
+					<div class="displayBox success">
+						This is .displayBox.success
+					</div>
+				</figure>
+				<figure>
+					<div class="displayBox confirm">
+						This is .displayBox.confirm
+					</div>
+				</figure>
+				<figure>
+					<div class="displayBox alert">
+						This is .displayBox.alert
+					</div>
+				</figure>
+				<figure>
+					<div class="displayBox warning">
+						This is .displayBox.warning
+					</div>
+				</figure>
+				<figure>
+					<div class="displayBox info">
+						This is .displayBox.info
+					</div>
+				</figure>
+				<figure>
+					<div class="displayBox system">
+						This is .displayBox.system
+					</div>
+				</figure>
+				<figure>
+					<div class="displayBox dark">
+						This is .displayBox.dark
+					</div>
+				</figure>
+			</section>
+			<section id="utility">
+				<hr>
+				<h2 style="display:block;">Utility &amp; UI Classes</h2>
+				<ul>
+					<li>
+						Consider using the sass property <em>extend</em> to reduce the number of utility classes exposed in the html. <a href="http://sass-lang.com/guide#topic-7">Documentation.</a>
+					</li>
+					<li>The class <em>.pull-right</em> is available for floating elements to the right.</li>
+					<li>The classes <em>.utility--shadow-1</em> to <em>.utility--shadow-5</em> are avaialable to set shadow levels, matching those from Google's material design guidelines.</li>
+					<li>
+						<em>.utility--shadow-1</em> includes a hover state by default. To remove the hover state, <em>extend</em> with the class <em>.noRaise</em>
+					</li>
+					<li>
+						The class <em>.utility--shadow-flat</em> is available for when you want to have a shadow on <em>:hover</em> only. Additionally, you can <em>extend</em> with <em>.small</em> to create a smaller shadow on hover state. This class can also be extended with <em>.active</em> or <em>.activeS</em> to create <em>:active</em> state hover effects as well. (Great for buttons that need more emphasis).
+					</li>
+				</ul>
+			</section>
+		</body>
