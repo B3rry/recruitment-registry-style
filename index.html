@@ -12,6 +12,8 @@
 		  <option value="" disabled="disabled" selected="true">Jump To Section</option>
           <option value="colors">Colors</option>
           <option value="typography">Typography</option>
+          <option value="scaffolding">Scaffolding (via Flexboxgrid)</option>
+          <option value="animation">Animation (via animate.css)</option>
           <option value="buttons">Buttons</option>
           <option value="select">Select/Dropdowns</option>
           <option value="radio">Radio Groups</option>
@@ -197,13 +199,37 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat dolor id velit venenatis rutrum. Nam quis augue sed arcu fringilla cursus nec ac lacus. Maecenas condimentum elit eget lobortis hendrerit. Proin ultricies imperdiet odio, eu pharetra mauris tempus sed. In hac habitasse platea dictumst. Aliquam blandit nulla id placerat hendrerit. Donec luctus mattis ultrices. Quisque et justo quis nisl faucibus ornare. Proin sed vulputate velit, a aliquam odio. Vestibulum lorem purus, vehicula ac pellentesque nec, aliquet quis justo. Nullam tincidunt hendrerit libero. Nunc eu placerat tortor, a vehicula odio. Integer pretium massa ante, ut pharetra lectus porttitor dapibus. Nullam vulputate, augue nec tincidunt laoreet, diam eros pellentesque lectus, eu ultricies augue dolor ut lectus.</p>
 	</figure>
 </section>
+<section id="scaffolding">
+	<hr>
+	<h2 style="display:block;">Scaffolding</h2>
+	<ul>
+		<li>Scaffolding is implemented via flexboxgrid. </li>
+		<li>
+			Documentation is available at: <a href="http://flexboxgrid.com/">http://flexboxgrid.com</a>
+		<li>
+			Consider using the sass property <em>extend</em> to reduce the number of utility classes exposed in the html. <a href="http://sass-lang.com/guide#topic-7">Documentation.</a>
+		</li>
+	</ul>
+</section>
+<section id="animation">
+	<hr>
+	<h2 style="display:block;">Animation</h2>
+	<ul>
+		<li>Animation is implemented via <em>animate.css</em>.</li>
+		<li>
+			Documentation is available at: <a href="https://github.com/daneden/animate.css">https://github.com/daneden/animate.css</a>
+		<li>
+			Consider using the sass property <em>extend</em> to reduce the number of utility classes exposed in the html. <a href="http://sass-lang.com/guide#topic-7">Documentation.</a>
+		</li>
+	</ul>
+</section>
 <section id="buttons">
 <hr>
 <h2 style="display:block;">Buttons</h2>
 	<ul>
 		<li>Buttons that preform an <b>action</b> should utilize the <em>button</em> tag.</li>
 		<li>
-			Buttons that take you to a <b>new location</b> should utilize the <em>a</em> tag.
+			Buttons that take you to a <b>new location</b> should utilize the <em>a</em> tag. <b>NOT EVERY <em>a</em> TAG NEEDS TO BE A BUTTON, THERE ARE MULTIPLE INSTANCES WHERE THEY STAY AS DEFAULT A TAG STYLING IN THE COMPS</b>
 			</li>
 		<li>
 			Buttons should always include either the <em>.buttonPrimary</em> or <em>.buttonSecondary</em> class.
@@ -269,9 +295,20 @@
 	<figure>
 	<button class="buttonSecondary dark">buttonSecondary.dark</button>
 	</figure>
-
 </section>
-
+<section id="select">
+	<hr>
+<h2 style="display:block;">Select</h2>
+	<ul>
+		<li>Dropdowns are styled by using the default <em>select</em> implementation. <a href="http://www.w3schools.com/tags/tag_select.asp">W3 Schools - HTML select Tag documentation</a></li>
+		<li>
+			Selects use a custom background-image for dropdown indicator custom style. This reuqires a SASS function to execute. If you must change the color outside of the normal classes, this color must be passed as a HEX value. See the implementations in <em>./client/src/styles/components/_form.scss</em> 
+			</li>
+		<li>
+			You may need to specify a specific style of select. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
+		</li>
+	</ul>
+</section>
 
 
 
