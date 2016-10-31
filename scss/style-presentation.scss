@@ -1,9 +1,22 @@
-@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
 @import 'style-guide';
 @import 'flexbox';
 
 body {
-	background-color: #f5f6f7;
+	background-color: #f5f7f7;
+}
+
+#floatingNAV {
+	position: fixed;
+	right: 0;
+	top: 0;
+	background-color: $color-light-grey;
+	@extend .utility--shadow-1;
+	padding: 6px 6px;
+	border-radius: 0 0 0 6px;
+	select {
+		margin: 0;
+	}
 }
 time {
 	font-style: italic;
@@ -24,15 +37,41 @@ textarea {
 	padding-left: 5px;
 	padding-right: 5px;
 	resize: none;
-	height: 28px !important;
 	width: 100% !important;
 }
 hr {
 	margin-top: 1.625em;
 }
 
+ul {
+	display: block;
+	// list-style-type: circle;
+	li {
+		display: block;
+		padding-bottom: 10px;
+		padding-left: 40px;
+		b {
+			font-weight: 700;
+		}
+		em {
+			font-family: monospace;
+			border: 1px solid #e1e1e8;
+			background-color: #f7f7f9;
+			color: #DD3953;
+			border-radius: 3px;
+			padding: 3px 6px;
+		}
+		&:before {
+			content: '🔔';
+			margin-left: -30px;
+			width: 24px;
+			display: inline-block;
+		}
+	}
+}
 #colors {
 	figure {
+	margin-bottom: 20px;
 	display: inline-block;
 	@extend .col-xs-6;
 	@extend .col-sm-4;
@@ -54,27 +93,49 @@ hr {
 			margin-right: 5px;
 			display: block;
 		}
+		textarea {
+			height: 28px !important;
+		}
 	}
 }
 }
 #typography {
 	figure {
 		display: block;
-		// border-bottom: 1px solid #e0e0e0;
-		@extend .col-xs-12;
+		min-height: 140px;
+		border-bottom: 1px solid #e0e0e0;
+		&:first-of-type {
+			border-top: 1px solid #e0e0e0;
+		}
+		margin-bottom: 1.62em;
+		padding-bottom: 1.62em;
 		h1, h2, h3, h4, h5, h6, p {
 			@extend .col-xs-12;
-			@extend .col-sm-8;
+			@extend .col-sm-9;
 			display: inline-block;
+			border-bottom: 1px solid red;
+			border-top: 1px solid red;
 		}
 		figcaption {
 			@extend .col-xs-12;
 			@extend .col-sm-4;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			background-color: #fff;
+			// height: 100%;
+			top:0;
 			display: inline-block;
+			margin-top: 20px;
 			float: right;
 			textarea {
+				border: none;
 				width: 100% !important;
 			}
 		}
+	}
+}
+#buttons {
+	figure {
+		display: inline-block;
+		padding: 5px;
 	}
 }

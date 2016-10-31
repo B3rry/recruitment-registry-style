@@ -1,36 +1,6 @@
-@import 'reset';
-@import 'vendor/normalize';
-@import 'vendor/flexboxgrid';
-@import 'vendor/animate';
-
-// Global variables and UI chrome
-@import 'utils/variables';
-@import 'utils/ui';
-
-// Theme variables are made available via import in '~/client/src/styles/theme/*' read the README.md in that directory for more.
-@import 'theme/config';
-
-// Various UI components. (Comments are provided for utilization, review each document for expample utilization.)
-@import 'components/text';
-@import 'components/buttons';
-@import 'components/home';
-@import 'components/form-page';
-@import 'components/form';
-@import 'components/nav';
-@import 'components/loading-indicator';
-
-
-
-// Typographic Grid
-body {
-  font-family: $font-primary;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1em;
-  line-height: 1.625em;
-  // max-width: 760px;
-  padding: 1.625em;
-  margin: 0 auto;
+html, body {
+  font-family: $text-font-stack;
+  color: $gap-black;
 }
 h1 {
   font-family: inherit;
@@ -100,4 +70,7 @@ sup {
 }
 sub {
   bottom: -0.25em;
+}
+a {
+  color: $gap-medium-blue;
 }
