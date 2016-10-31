@@ -8,7 +8,7 @@
 <span>Last updated on <time>October 31st, 2016</time></span>
 <div id="floatingNAV">
 	<!-- <span>Jump to:</span> -->
-	<select className="form--select">
+	<select class="light">
 		  <option value="" disabled="disabled" selected="true">Jump To Section</option>
           <option value="colors">Colors</option>
           <option value="typography">Typography</option>
@@ -17,7 +17,9 @@
           <option value="buttons">Buttons</option>
           <option value="select">Select/Dropdowns</option>
           <option value="radio">Radio Groups</option>
-          <option value="radio">Checkboxes</option>
+          <option value="checkboxes">Checkboxes</option>
+          <option value="displayboxes">Display Boxes (Alerts/Notifications)</option>
+          <option value="utility">Utility &amp; UI Classes</option>
     </select>
     <script type="text/javascript">
     	$('#floatingNAV').children('select').bind('change', function () {  
@@ -238,6 +240,9 @@
 			Additionally, you may need to specify a specific style of button. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
 		</li>
 	</ul>
+		<textarea readonly="true">
+<button class="buttonPrimary success">Sign In</button>
+	</textarea>
 	<figure>
 		<button>default button</button>
 	</figure>
@@ -308,8 +313,275 @@
 			You may need to specify a specific style of select. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
 		</li>
 	</ul>
+	<textarea readonly="true">
+<select class="success">
+	<option value="Apple">Apple</option>
+	<option value="Banana">Banana</option>
+	<option value="Cranberry">Cranberry</option>
+</select>
+	</textarea>
+	<figure><select>
+          <option value="A">Default Select</option>
+          <option value="B">Banana</option>
+          <option value="C">Cranberry</option>
+        </select>
+        </figure>
+        <figure style="background-color: #333">
+        <select class="form--select light">
+          <option value="A">select.light</option>
+          <option value="B">Banana</option>
+          <option value="C">Cranberry</option>
+        </select>
+        </figure>
+        <figure>
+        <select class="form--select success">
+          <option value="A">select.success</option>
+          <option value="B">Banana</option>
+          <option value="C">Cranberry</option>
+        </select>
+        </figure>
+        <figure>
+        <select class="form--select confirm">
+          <option value="A">select.confirm</option>
+          <option value="B">Banana</option>
+          <option value="C">Cranberry</option>
+        </select>
+        </figure>
+        <figure>
+        <select class="form--select alert">
+          <option value="A">select.alert</option>
+          <option value="B">Banana</option>
+          <option value="C">Cranberry</option>
+        </select>
+        </figure>
+        <figure>
+        <select class="form--select warning">
+          <option value="A">select.warning</option>
+          <option value="B">Banana</option>
+          <option value="C">Cranberry</option>
+        </select>
+        </figure>
+        <figure>
+        <select class="form--select info">
+          <option value="A">select.info</option>
+          <option value="B">Banana</option>
+          <option value="C">Cranberry</option>
+        </select>
+        </figure>
+        <figure>
+        <select class="form--select system">
+          <option value="A">select.system</option>
+          <option value="B">Banana</option>
+          <option value="C">Cranberry</option>
+        </select>
+        </figure>
+        <figure>
+        <select class="form--select dark">
+          <option value="A">select.dark</option>
+          <option value="B">Banana</option>
+          <option value="C">Cranberry</option>
+        </select></figure>
+</section>
+<section id="radio">
+	<hr>
+	<h2 style="display:block;">Radio Groups</h2>
+	<ul>
+		<li>Radio groups are styled by using the default <em>radio</em> implementation. <a href="http://www.w3schools.com/html/html_forms.asp">W3 Schools - HTML Form Radio Button input</a></li>
+		<li>
+			You may need to specify a specific style of radio group. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
+		</li>
+	</ul>
+	<textarea readonly="true">
+<form class="radioGroup"> 
+	<input type="radio" name="gender" id="male" value="male"/>
+	<label for="male">Male</label>
+	<input type="radio" name="gender" id="female" value="female"/>
+	<label for="female">Female</label>
+	<input type="radio" name="gender" id="other" value="other"/>
+	<label for="other">Other</label>
+</form>
+	</textarea>
+	<figure>
+		<form class="radioGroup"> 
+          <input type="radio" name="gender" id="male" value="male"/>
+          <label for="male">.radioGroup</label>
+          <input type="radio" name="gender" id="female" value="female"/>
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="other" value="other"/>
+          <label for="other">Other</label>
+        </form>
+	</figure>
+	<figure style="background-color: #333">
+		<form class="radioGroup light"> 
+          <input type="radio" name="gender1" id="male1" value="male1"/>
+          <label for="male1">.radioGroup.light</label>
+          <input type="radio" name="gender1" id="female1" value="female1"/>
+          <label for="female1">Female</label>
+          <input type="radio" name="gender1" id="other1" value="other1"/>
+          <label for="other1">Other</label>
+        </form>
+	</figure>
+	<figure>
+		<form class="radioGroup success"> 
+          <input type="radio" checked="checked" name="gender2" id="male2" value="male2"/>
+          <label for="male2">.radioGroup.success</label>
+          <input type="radio" name="gender2" id="female2" value="female2"/>
+          <label for="female2">Female</label>
+          <input type="radio" name="gender2" id="other2" value="other2"/>
+          <label for="other2">Other</label>
+        </form>
+	</figure>
+	<figure>
+		<form class="radioGroup confirm"> 
+          <input type="radio" checked="checked" name="gender3" id="male3" value="male3"/>
+          <label for="male3">.radioGroup.confirm</label>
+          <input type="radio" name="gender3" id="female3" value="female3"/>
+          <label for="female3">Female</label>
+          <input type="radio" name="gender3" id="other3" value="other3"/>
+          <label for="other3">Other</label>
+        </form>
+	</figure>
+	<figure>
+		<form class="radioGroup alert"> 
+          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
+          <label for="male">.radioGroup.alert</label>
+          <input type="radio" name="gender" id="female" value="female"/>
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="other" value="other"/>
+          <label for="other">Other</label>
+        </form>
+	</figure>
+	<figure>
+		<form class="radioGroup warning"> 
+          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
+          <label for="male">.radioGroup.warning</label>
+          <input type="radio" name="gender" id="female" value="female"/>
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="other" value="other"/>
+          <label for="other">Other</label>
+        </form>
+	</figure>
+	<figure>
+		<form class="radioGroup info"> 
+          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
+          <label for="male">.radioGroup.info</label>
+          <input type="radio" name="gender" id="female" value="female"/>
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="other" value="other"/>
+          <label for="other">Other</label>
+        </form>
+        </figure>
+        <figure>
+		<form class="radioGroup system"> 
+          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
+          <label for="male">.radioGroup.system</label>
+          <input type="radio" name="gender" id="female" value="female"/>
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="other" value="other"/>
+          <label for="other">Other</label>
+        </form>
+	</figure>
+	<figure>
+		<form class="radioGroup dark"> 
+          <input type="radio" checked="checked" name="gender" id="male" value="male"/>
+          <label for="male">.radioGroup.dark</label>
+          <input type="radio" name="gender" id="female" value="female"/>
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="other" value="other"/>
+          <label for="other">Other</label>
+        </form>
+	</figure>
 </section>
 
+<section id="checkboxes">
+	<hr>
+	<h2 style="display:block;">Checkboxes</h2>
+	<ul>
+		<li>Coming soon</li>
+	</ul>
+	<figure>
+		
+	</figure>
+</section>
+
+<section id="displayboxes">
+	<hr>
+	<h2 style="display:block;">Display Boxes (Alerts/Notifications)</h2>
+	<ul>
+		<li>Display boxes are used to show alerts and notifications to a user. This includes validation messages and warnings. Use <em>.displayBox</em> to extend the class to your <em>div</em></li>
+		<li>
+			Consider adding <em>.animated</em> and <em>.fadeInUp</em> to notifications that appear to a user after an action.
+		</li>
+		<li>
+			This is the only section where colors are not defined as explicit variables. Use <em>background-color: lighten($, 33%);</em> when constructing new <em>displayBox</em> types.
+		</li>
+		<li>
+			You may need to specify a specific style of display box. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
+		</li>
+	</ul>
+	<textarea readonly="true">
+<div class="displayBox alert">
+	This is my message
+</div>
+	</textarea>
+	<figure>
+		<div class="displayBox">
+			This is .displayBox
+		</div>
+	</figure>
+	<figure>
+		<div class="displayBox light">
+			This is .displayBox.light
+		</div>
+	</figure>
+	<figure>
+		<div class="displayBox success">
+			This is .displayBox.success
+		</div>
+	</figure>
+	<figure>
+		<div class="displayBox confirm">
+			This is .displayBox.confirm
+		</div>
+	</figure>
+	<figure>
+		<div class="displayBox alert">
+			This is .displayBox.alert
+		</div>
+	</figure>
+	<figure>
+		<div class="displayBox warning">
+			This is .displayBox.warning
+		</div>
+	</figure>
+	<figure>
+		<div class="displayBox info">
+			This is .displayBox.info
+		</div>
+	</figure>
+	<figure>
+		<div class="displayBox system">
+			This is .displayBox.system
+		</div>
+	</figure>
+	<figure>
+		<div class="displayBox dark">
+			This is .displayBox.dark
+		</div>
+	</figure>
+</section>
+
+<section id="utility">
+	<hr>
+	<h2 style="display:block;">Utility &amp; UI Classes</h2>
+	<ul>
+		<li>Radio groups are styled by using the default <em>radio</em> implementation. <a href="http://www.w3schools.com/html/html_forms.asp">W3 Schools - HTML Form Radio Button input</a></li>
+		<li>
+			You may need to specify a specific style of select. Use the following classes to do so: <em>.light</em> <em>.success</em> <em>.confirm</em> <em>.alert</em> <em>.warning</em> <em>.info</em> <em>.system</em> <em>.dark</em>
+		</li>
+	</ul>
+	
+</section>
 
 
 

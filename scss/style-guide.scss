@@ -13,6 +13,9 @@
 // Various UI components. (Comments are provided for utilization, review each document for expample utilization.)
 @import 'components/text';
 @import 'components/buttons';
+@import 'components/displayBox';
+@import 'components/select';
+@import 'components/radio';
 @import 'components/home';
 @import 'components/form-page';
 @import 'components/form';
@@ -28,76 +31,7 @@ body {
   font-style: normal;
   font-size: 1em;
   line-height: 1.625em;
-  // max-width: 760px;
+  max-width: 1440px;
   padding: 1.625em;
   margin: 0 auto;
-}
-h1 {
-  font-family: inherit;
-  font-weight: 600;
-  font-style: inherit;
-  font-size: 3.3125em;
-  line-height: 1.4716981132075473em;
-  margin-top: 0.49056603773584906em;
-  margin-bottom: 0em;
-}
-h2 {
-  font-family: inherit;
-  font-weight: 600;
-  font-style: inherit;
-  font-size: 2.25em;
-  line-height: 1.4444444444444444em;
-  margin-top: 0.7222222222222222em;
-  margin-bottom: 0.7222222222222222em;
-}
-h3 {
-  font-family: inherit;
-  font-weight: 600;
-  font-style: inherit;
-  font-size: 1.5em;
-  line-height: 1.0833333333333333em;
-  margin-top: 1.0833333333333333em;
-  margin-bottom: 0em;
-}
-h4 {
-  font-family: inherit;
-  font-weight: 600;
-  font-style: inherit;
-  font-size: 1em;
-  line-height: 1.625em;
-  margin-top: 1.625em;
-  margin-bottom: 0em;
-}
-h5 {
-  font-family: inherit;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 1em;
-  line-height: 1.625em;
-  margin-top: 1.625em;
-  margin-bottom: 0em;
-}
-p, ul, ol, pre, table, blockquote {
-  margin-top: 0em;
-  margin-bottom: 1.625em;
-}
-ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-hr {
-  border: 1px solid;
-  margin: -1px 0;
-}
-b, strong, em, small, code {
-  line-height: 1;
-}
-sup {
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
 }

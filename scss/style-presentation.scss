@@ -10,12 +10,18 @@ body {
 	position: fixed;
 	right: 0;
 	top: 0;
-	background-color: $color-light-grey;
+	background-color: $color-black;
 	@extend .utility--shadow-1;
 	padding: 6px 6px;
 	border-radius: 0 0 0 6px;
 	select {
 		margin: 0;
+	}
+}
+section {
+	margin-top: 360px;
+	&:first-of-type {
+		margin-top: 20px;
 	}
 }
 time {
@@ -137,5 +143,33 @@ ul {
 	figure {
 		display: inline-block;
 		padding: 5px;
+	}
+	textarea {
+		border-bottom: 1px solid #e0e0e0;
+	}
+}
+#select {
+	figure {
+		display: inline-block;
+		padding: 5px;
+	}
+	textarea {
+		height: 160px;
+		border-bottom: 1px solid #e0e0e0;
+	}
+}
+#radio {
+	figure {
+		display: inline-block;
+	}
+	textarea {
+		height: 240px;
+		border-bottom: 1px solid #e0e0e0;
+	}
+}
+#displayboxes {
+	textarea {
+		height: 120px;
+		border-bottom: 1px solid #e0e0e0;
 	}
 }
